@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "432469687010",
+    "firebase_url": "https://sevamitra-fe08e-default-rtdb.firebaseio.com",
+    "project_id": "sevamitra-fe08e",
+    "storage_bucket": "sevamitra-fe08e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:432469687010:android:81bb4afd12646536397cbb",
+        "android_client_info": {
+          "package_name": "com.example.sevamitra"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAldfk9YkkXIk3Pq7msnoyUvKVcCGpf7Z4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
