@@ -17,7 +17,8 @@ class PartnerActivity : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var btnAddService: Button
-    private lateinit var btnLogout: Button
+    private lateinit var btnProfile: Button
+    private lateinit var btnBack: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,7 +29,8 @@ class PartnerActivity : AppCompatActivity() {
 
         recyclerView = findViewById(R.id.recyclerView)
         btnAddService = findViewById(R.id.btnAddService)
-        btnLogout = findViewById(R.id.btnLogout)
+        btnProfile = findViewById(R.id.btnProfile)
+        btnBack = findViewById(R.id.btnBack)
 
         recyclerView.layoutManager = LinearLayoutManager(this)
 
@@ -36,9 +38,11 @@ class PartnerActivity : AppCompatActivity() {
             startActivity(Intent(this, AddServiceActivity::class.java))
         }
 
-        btnLogout.setOnClickListener {
-            auth.signOut()
-            startActivity(Intent(this, MainActivity::class.java))
+        btnProfile.setOnClickListener {
+            startActivity(Intent(this, ProfileActivity::class.java))
+        }
+
+        btnBack.setOnClickListener {
             finish()
         }
     }

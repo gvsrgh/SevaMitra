@@ -18,7 +18,8 @@ class SeekerActivity : AppCompatActivity() {
 
     private lateinit var tabLayout: TabLayout
     private lateinit var recyclerView: RecyclerView
-    private lateinit var btnLogout: Button
+    private lateinit var btnProfile: Button
+    private lateinit var btnBack: Button
 
     private val categories = listOf("All", "Plumber", "Electrician", "Carpenter", "AC", "Painter")
     private var currentCategory = "All"
@@ -32,15 +33,18 @@ class SeekerActivity : AppCompatActivity() {
 
         tabLayout = findViewById(R.id.tabLayout)
         recyclerView = findViewById(R.id.recyclerView)
-        btnLogout = findViewById(R.id.btnLogout)
+        btnProfile = findViewById(R.id.btnProfile)
+        btnBack = findViewById(R.id.btnBack)
 
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         setupTabs()
 
-        btnLogout.setOnClickListener {
-            auth.signOut()
-            startActivity(Intent(this, MainActivity::class.java))
+        btnProfile.setOnClickListener {
+            startActivity(Intent(this, ProfileActivity::class.java))
+        }
+
+        btnBack.setOnClickListener {
             finish()
         }
 
